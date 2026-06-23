@@ -1,8 +1,8 @@
 schema_version: 1
 
 context:
-  version: "0.19.0"
-  sha256: 46e1b2d71343d14e4c07d7e60902e673c78defb9a2c282b70ad80fb8502ade2e
+  version: "0.19.1"
+  sha256: b9a8d07fca2d5d10d93220bc57a685161d72af1fc76285d55c564ddaa862e584
   python_min: "3.8"
 
 package:
@@ -16,7 +16,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: 
+  script:
     - rm tests/samples/issue-401-sdist-with-symlinks/VERSION
     - ${{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
